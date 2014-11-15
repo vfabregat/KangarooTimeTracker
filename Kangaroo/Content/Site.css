@@ -1,0 +1,35 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.input-small {
+  width: 44px;
+  height: 44px ;
+  margin-bottom: 10px;
+  line-height: 30px;
+  padding: 11px 19px;
+  font-size: 17.5px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.logo {
+    font-family: 'Shadows Into Light two', cursive;
+    font-size: x-large;
+}

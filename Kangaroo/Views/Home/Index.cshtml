@@ -1,0 +1,64 @@
+﻿@model Kangaroo.Models.TimeSheet
+@{
+    ViewBag.Title = "Home Page";
+    var monday = Model.Week.First();
+}
+
+<h1>@String.Format("{0:MMMM}", monday)</h1>
+<div>
+    <a href="@Html.GenerateLink("Index", new { date = monday.AddDays(-7) })" class="btn btn-primary" data-toggle="tooltip" title="Previous week">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+
+    <a href="@Html.GenerateLink("Index", new { date = monday.AddDays(7) })" class="btn btn-primary" data-toggle="tooltip" title="Next week">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+@using (Html.BeginForm())
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DropDownListFor(m => m.SelectedProject,
+                    new SelectList(Model.AvailableProjects, "Name", "Name", Model.SelectedProject), string.Empty, new { @class = "form-control input-sm" })
+                </th>
+                @foreach (var day in Model.Week)
+                {
+                    <th>@String.Format("{0:dddd d}", day)</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var i = 0;
+                decimal? quantity = null;
+            }
+            @foreach (var project in Model.AssignedProjects)
+            {
+                <tr>
+                    <td>@project</td>
+                    @foreach (var day in Model.Week)
+                    {
+                        var timeEntry = Model.TimeEntries.SingleOrDefault(t => t.Project == project && t.Date.Date == day.Date);
+                        <td>
+                            @if (timeEntry != null)
+                            {
+                                quantity = timeEntry.Quantity;
+                                <input type="hidden" name="TimeEntries[@i].Id" value="@timeEntry.Id" />
+                            }
+
+                            <input type="hidden" name="TimeEntries[@i].Date" value="@day" />
+                            <input type="hidden" name="TimeEntries[@i].Project" value="@project" />
+                            <input type="text" name="TimeEntries[@i].Quantity" value="@quantity" placeholder="Hours" class="form-control input-sm" />
+                        </td>
+                            i++;
+                            quantity = null;
+                    }
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <button type="submit" class="pull-right btn btn-primary" data-toggle="tooltip" title="Saves the information: Time entries and new project assignation">Save</button>
+}
