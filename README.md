@@ -35,3 +35,10 @@ From [nuget](https://www.nuget.org/):
 To check the complete view see the [package.config file](/Kangaroo/packages.config?raw=true "All packages")
 
 The **CommandProcessor** was taken from [EFMVC repository](https://github.com/shijuvar/EFMVC.Azure/tree/master/EFMVC.CommandProcessor) and from [FNHMVC repository](https://fnhmvc.codeplex.com/)
+
+
+###Pending task
+
+* Implement Authentication
+* Implement Authorization for diferent features
+* ...
