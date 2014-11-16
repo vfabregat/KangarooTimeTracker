@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kangaroo", "Kangaroo\Kangaroo.csproj", "{B9B71DA0-E6F8-4CBA-821B-77DA8C939646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kangaroo.Tests", "C:\Users\usuario1\Documents\Visual Studio 2013\Projects\Kangaroo\Kangaroo.Tests\Kangaroo.Tests.csproj", "{8E0C0190-0171-472F-A95D-B89BD5E5E903}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kangaroo.Tests", "Kangaroo.Tests\Kangaroo.Tests.csproj", "{8E0C0190-0171-472F-A95D-B89BD5E5E903}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
