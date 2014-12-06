@@ -251,6 +251,7 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\Kangaroo local site.pubxml" />
     <None Include="Properties\PublishProfiles\KangarooTimeTracker - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\KangarooTimeTracker - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
