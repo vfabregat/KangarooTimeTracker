@@ -1,6 +1,6 @@
 # Kangaroo TimeTracker
 
-Kangaroo is a simple time tracker wich allows add hour in a project by day.
+Kangaroo is a simple time tracker which allows one to add hours to a project by day.
 
 ###Screenshots
 
@@ -12,12 +12,12 @@ Kangaroo is a simple time tracker wich allows add hour in a project by day.
 
 ###Intention of the project
 
-This project is a proof of concept to try a few new concepts. 
-The project use an [CQS](http://en.wikipedia.org/wiki/Command%E2%80%93query_separation) approach and MongoDb to store information. 
+This project is a proof of concept to try out a few new concepts. 
+The project uses a [CQS](http://en.wikipedia.org/wiki/Command%E2%80%93query_separation) approach and MongoDb to store information. 
 
 ###Open source dependencies
 
-The TimeTracker use a few open source components.
+The TimeTracker uses a few open source components.
 
 From [nuget](https://www.nuget.org/):
 
@@ -37,7 +37,7 @@ To check the complete view see the [package.config file](/Kangaroo/packages.conf
 The **CommandProcessor** was taken from [EFMVC repository](https://github.com/shijuvar/EFMVC.Azure/tree/master/EFMVC.CommandProcessor) and from [FNHMVC repository](https://fnhmvc.codeplex.com/)
 
 
-###Pending task
+###Pending tasks
 
 * Implement Authentication
 * Implement Authorization for diferent features
