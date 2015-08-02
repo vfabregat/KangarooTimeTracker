@@ -2,10 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Kangaroo.Infrastructure;
-using Kangaroo.Models;
 using MongoDB.Bson;
 
 namespace Kangaroo.Tests.Infrastructure

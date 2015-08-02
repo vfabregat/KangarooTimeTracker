@@ -26,7 +26,6 @@ namespace Kangaroo.Infrastructure
         public Session()
         {
             client = new MongoClient(connectionString);
-
             database = client.GetServer().GetDatabase(databaseName);
         }
 
@@ -37,7 +36,7 @@ namespace Kangaroo.Infrastructure
 
         public void AddBatch<T>(IEnumerable<T> items)
         {
-            CurrentCollection<T>().InsertBatch(items);
+            CurrentCollection<T>().Save(items);
         }
 
         public void UpdateBatch<T>(IEnumerable<T> items)
@@ -45,7 +44,9 @@ namespace Kangaroo.Infrastructure
             foreach (var item in items)
             {
                 CurrentCollection<T>().Save(item);
+
             }
+
         }
 
         private string GetCollectionName<T>()
@@ -56,7 +57,7 @@ namespace Kangaroo.Infrastructure
         public TOutput Aggregate<T, TOutput>(IEnumerable<BsonDocument> pipeline)
         {
             var pipe = new AggregateArgs();
-            
+
             pipe.Pipeline = pipeline;
 
             var result = CurrentCollection<T>().Aggregate(pipe);
@@ -80,7 +81,7 @@ namespace Kangaroo.Infrastructure
         {
             return CurrentCollection<T>().AsQueryable<T>();
         }
-        private MongoCollection CurrentCollection<T>()
+        MongoCollection CurrentCollection<T>()
         {
             return database.GetCollection<T>(GetCollectionName<T>());
         }

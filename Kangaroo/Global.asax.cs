@@ -11,6 +11,7 @@ using Kangaroo.Common;
 using Kangaroo.Utils;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 
 namespace Kangaroo
 {
@@ -33,7 +34,7 @@ namespace Kangaroo
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            BsonSerializer.RegisterSerializationProvider(new CustomDecimalSerializer());
+            BsonSerializer.RegisterSerializer(typeof(decimal), new CustomDecimalSerializer());
 
         }
     }
