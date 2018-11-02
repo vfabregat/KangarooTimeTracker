@@ -2,20 +2,20 @@
 
 Kangaroo is a simple time tracker which allows one to add hours to a project by day.
 
-###Screenshots
+## Screenshots
 
-####The home page
+### The home page
 ![Home screenshot](/Screenshots/Home.PNG?raw=true "Home")
 
-####The dashboard
+### The dashboard
 ![Dashboard screenshot](/Screenshots/Dahsboard.PNG?raw=true "Dashboard")
 
-###Intention of the project
+## Intention of the project
 
 This project is a proof of concept to try out a few new concepts. 
 The project uses a [CQS](http://en.wikipedia.org/wiki/Command%E2%80%93query_separation) approach and MongoDb to store information. 
 
-###Open source dependencies
+## Open source dependencies
 
 The TimeTracker uses a few open source components.
 
@@ -37,7 +37,7 @@ To check the complete view see the [package.config file](/Kangaroo/packages.conf
 The **CommandProcessor** was taken from [EFMVC repository](https://github.com/shijuvar/EFMVC.Azure/tree/master/EFMVC.CommandProcessor) and from [FNHMVC repository](https://fnhmvc.codeplex.com/)
 
 
-###Pending tasks
+## Pending tasks
 
 * Implement Authentication
 * Implement Authorization for diferent features
